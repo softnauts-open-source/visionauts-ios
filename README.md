@@ -5,7 +5,7 @@ Visionauts is an open source project created by Softnauts (https://www.softnauts
 The user, when moving around, receives information about his location based on beacons in his vicinity. The content of beacons must be configured in CMS. Every beacon must have an assigned information in CMS that will be read to the user by mobile application when he is near beacon. The application recognizes a specific beacon based on its uuid, minor and major.
 
 The application should work with all beacons supporting the iBeacon standard. 
-Visionauts uses default SDK for detecting beacons, however you can easily use any other services, i.e. https://kontakt.io/.
+Visionauts uses default Core Location SDK for detecting beacons, however you can easily use any other services, i.e. https://kontakt.io/.
 
 ![ScreenShot](https://raw.githubusercontent.com/softnauts-open-source/visionauts-ios/master/sc1.png)
 ![ScreenShot](https://raw.githubusercontent.com/softnauts-open-source/visionauts-ios/master/sc2.png)
@@ -63,6 +63,8 @@ All beacons detections invokes method: foundBeacons(_ beacons: [CLBeacon]), prov
 The application gives ability to modify services and design in easy way. 
 All services are defined in one file _ServicesFactory.swift_ which is the main interface.
 Each service implements interface methods, so it can be exchanged just in one place and it can have its own implementation.
+
+App structure is created using MVVM pattern which helps in testing and encapsulates business logic.
 
 App navigation is managed by Coordinators and this makes it very flexible to navigate between view controllers.
 
