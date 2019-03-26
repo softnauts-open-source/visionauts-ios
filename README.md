@@ -7,9 +7,9 @@ The user, when moving around, receives information about his location based on b
 The application should work with all beacons supporting the iBeacon standard. 
 Visionauts uses default SDK for detecting beacons, however you can easily use any other services, i.e. https://kontakt.io/.
 
-![ScreenShot](https://raw.githubusercontent.com/softnauts-open-source/visionauts_ios/master/sc1.png)
-![ScreenShot](https://raw.githubusercontent.com/softnauts-open-source/visionauts_ios/master/sc2.png)
-![ScreenShot](https://raw.githubusercontent.com/softnauts-open-source/visionauts_ios/master/sc3.png)
+![ScreenShot](https://raw.githubusercontent.com/softnauts-open-source/visionauts-ios/master/sc1.png)
+![ScreenShot](https://raw.githubusercontent.com/softnauts-open-source/visionauts-ios/master/sc2.png)
+![ScreenShot](https://raw.githubusercontent.com/softnauts-open-source/visionauts-ios/master/sc3.png)
 
 ### I. How to use it
 ##### 1. Install library dependencies using CocoaPods
