@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launching View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LaunchingViewController" id="BYZ-38-t0r" customClass="LaunchingViewController" customModule="visionauts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenGradient" translatesAutoresizingMaskIntoConstraints="NO" id="isP-ho-UTY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="562"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5T4-UX-Bnl">
+                                <rect key="frame" x="84" y="218" width="207" height="191"/>
+                            </imageView>
+                            <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7m8-ry-QNM">
+                                <rect key="frame" x="20" y="625" width="335" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="3HK-jq-bHg"/>
+                                </constraints>
+                                <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="trackTintColor" white="1" alpha="0.059999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1019607843" green="0.14901960780000001" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="isP-ho-UTY" secondAttribute="trailing" id="KM1-p0-Qm6"/>
+                            <constraint firstItem="7m8-ry-QNM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="LNT-Ip-Be0"/>
+                            <constraint firstItem="5T4-UX-Bnl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LwJ-cg-9Cx"/>
+                            <constraint firstItem="isP-ho-UTY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="c8P-ba-OmO"/>
+                            <constraint firstItem="5T4-UX-Bnl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="c99-eG-y98"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="isP-ho-UTY" secondAttribute="bottom" constant="105" id="hzI-zO-wsf"/>
+                            <constraint firstItem="isP-ho-UTY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l8K-8M-Es4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7m8-ry-QNM" secondAttribute="bottom" constant="30" id="r9Y-NK-RPl"/>
+                            <constraint firstAttribute="trailing" secondItem="7m8-ry-QNM" secondAttribute="trailing" constant="20" id="xxE-go-Ctd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="E3L-Db-G8c"/>
+                    <connections>
+                        <outlet property="progressView" destination="7m8-ry-QNM" id="kiq-oo-noC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223" y="-33"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launchScreenGradient" width="375" height="465"/>
+        <image name="logo" width="207" height="191"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>

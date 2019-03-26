@@ -1,0 +1,37 @@
+PODS:
+  - Alamofire (4.8.1)
+  - Crashlytics (3.12.0):
+    - Fabric (~> 1.9.0)
+  - Fabric (1.9.0)
+  - Kingfisher (5.1.0)
+  - KontaktSDK (2.0.1)
+  - Pulsator (0.5.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Crashlytics
+  - Fabric
+  - Kingfisher
+  - KontaktSDK
+  - Pulsator
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Crashlytics
+    - Fabric
+    - Kingfisher
+    - KontaktSDK
+    - Pulsator
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
+  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
+  Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
+  KontaktSDK: 7dc507f20c8821d13132c6ec09089972e9b8bf5b
+  Pulsator: f465ca37212d826523fe8c79b07c1a4c1a941f5e
+
+PODFILE CHECKSUM: efabb2e7c4623d594015ff9a92bf005df792cbd2
+
+COCOAPODS: 1.6.1

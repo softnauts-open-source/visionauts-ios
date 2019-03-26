@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pne-uV-gXt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Proxima Nova Bold.otf">
+            <string>ProximaNova-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Detecting View Controller-->
+        <scene sceneID="W1w-5D-vQf">
+            <objects>
+                <viewController storyboardIdentifier="DetectingViewController" id="pne-uV-gXt" customClass="DetectingViewController" customModule="visionauts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jGz-ex-Dw5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenGradient" translatesAutoresizingMaskIntoConstraints="NO" id="L4Y-VH-lS4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="562"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detecting…" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqY-tO-Jgy">
+                                <rect key="frame" x="109.5" y="60" width="156" height="37"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6O-i8-F7n" customClass="CustomButtonWithPulse" customModule="visionauts" customModuleProvider="target">
+                                <rect key="frame" x="105.5" y="249.5" width="164" height="168"/>
+                                <state key="normal" image="detecting_ico"/>
+                                <connections>
+                                    <action selector="mainDetectingButtonTap:" destination="pne-uV-gXt" eventType="touchUpInside" id="rm9-Z6-CgC"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEv-DI-0Zb" customClass="DetectingCollectionView" customModule="visionauts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="567"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ii-Kl-HHg" customClass="SubMenuView" customModule="visionauts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Zgy-LV-krx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1019607843" green="0.14901960780000001" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1ii-Kl-HHg" firstAttribute="top" secondItem="eEv-DI-0Zb" secondAttribute="bottom" id="5sR-el-WC5"/>
+                            <constraint firstItem="L4Y-VH-lS4" firstAttribute="leading" secondItem="ZgG-rw-ez8" secondAttribute="leading" id="DHJ-0y-Vg3"/>
+                            <constraint firstItem="j6O-i8-F7n" firstAttribute="centerX" secondItem="jGz-ex-Dw5" secondAttribute="centerX" id="GJP-Jy-gq3"/>
+                            <constraint firstItem="fqY-tO-Jgy" firstAttribute="centerX" secondItem="jGz-ex-Dw5" secondAttribute="centerX" id="Gs8-6s-vbK"/>
+                            <constraint firstItem="eEv-DI-0Zb" firstAttribute="leading" secondItem="ZgG-rw-ez8" secondAttribute="leading" id="PgL-79-zzm"/>
+                            <constraint firstItem="ZgG-rw-ez8" firstAttribute="trailing" secondItem="1ii-Kl-HHg" secondAttribute="trailing" id="QIy-wd-TWh"/>
+                            <constraint firstItem="ZgG-rw-ez8" firstAttribute="bottom" secondItem="1ii-Kl-HHg" secondAttribute="bottom" id="Sg0-9S-K9P"/>
+                            <constraint firstItem="eEv-DI-0Zb" firstAttribute="top" secondItem="ZgG-rw-ez8" secondAttribute="top" id="bXs-ar-gz0"/>
+                            <constraint firstItem="j6O-i8-F7n" firstAttribute="centerY" secondItem="jGz-ex-Dw5" secondAttribute="centerY" id="ejP-RF-1FG"/>
+                            <constraint firstItem="1ii-Kl-HHg" firstAttribute="leading" secondItem="ZgG-rw-ez8" secondAttribute="leading" id="grU-1O-uWu"/>
+                            <constraint firstItem="ZgG-rw-ez8" firstAttribute="trailing" secondItem="eEv-DI-0Zb" secondAttribute="trailing" id="h6c-8O-bFF"/>
+                            <constraint firstItem="ZgG-rw-ez8" firstAttribute="bottom" secondItem="L4Y-VH-lS4" secondAttribute="bottom" constant="105" id="olH-Ja-S3l"/>
+                            <constraint firstAttribute="trailing" secondItem="L4Y-VH-lS4" secondAttribute="trailing" id="pJf-kO-2iX"/>
+                            <constraint firstItem="fqY-tO-Jgy" firstAttribute="top" secondItem="ZgG-rw-ez8" secondAttribute="top" constant="40" id="qf0-6F-lLi"/>
+                            <constraint firstItem="L4Y-VH-lS4" firstAttribute="top" secondItem="jGz-ex-Dw5" secondAttribute="top" id="tql-Vd-Qe5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZgG-rw-ez8"/>
+                    </view>
+                    <connections>
+                        <outlet property="detectingPlayerView" destination="eEv-DI-0Zb" id="8ql-jx-7OY"/>
+                        <outlet property="mainButton" destination="j6O-i8-F7n" id="KIs-7s-50X"/>
+                        <outlet property="subMenu" destination="1ii-Kl-HHg" id="9x6-9t-BoN"/>
+                        <outlet property="topLabel" destination="fqY-tO-Jgy" id="h7B-gh-QOW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Atm-63-CuH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1025" y="-448"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="detecting_ico" width="164" height="168"/>
+        <image name="launchScreenGradient" width="375" height="465"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>

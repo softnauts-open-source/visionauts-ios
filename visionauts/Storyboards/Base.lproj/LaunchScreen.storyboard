@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenGradient" translatesAutoresizingMaskIntoConstraints="NO" id="Lky-De-OwA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="562"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="6Y7-Xg-klw">
+                                <rect key="frame" x="84" y="218" width="207" height="191"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressBar" translatesAutoresizingMaskIntoConstraints="NO" id="EYC-zU-GlW">
+                                <rect key="frame" x="20" y="625" width="335" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="LgS-95-oRU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10196078431372549" green="0.14901960784313725" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lky-De-OwA" secondAttribute="trailing" id="BrS-c5-ldP"/>
+                            <constraint firstItem="6Y7-Xg-klw" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-20" id="D3v-vq-fee"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EYC-zU-GlW" secondAttribute="trailing" constant="20" id="TSg-cr-Ons"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lky-De-OwA" secondAttribute="bottom" constant="105" id="VpK-os-h1e"/>
+                            <constraint firstItem="6Y7-Xg-klw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fRZ-OO-YrT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EYC-zU-GlW" secondAttribute="bottom" constant="30" id="kJc-Za-JrY"/>
+                            <constraint firstItem="Lky-De-OwA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rst-2y-8vl"/>
+                            <constraint firstItem="EYC-zU-GlW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sGn-ec-LY7"/>
+                            <constraint firstItem="Lky-De-OwA" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="udB-FU-gbv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launchScreenGradient" width="375" height="465"/>
+        <image name="logo" width="207" height="191"/>
+        <image name="progressBar" width="335" height="12"/>
+    </resources>
+</document>

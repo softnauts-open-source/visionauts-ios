@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6vz-6C-rs2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Help View Controller-->
+        <scene sceneID="rQf-c0-ZGm">
+            <objects>
+                <viewController storyboardIdentifier="HelpViewController" id="6vz-6C-rs2" customClass="HelpViewController" customModule="visionauts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h65-O5-rXv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDn-Ta-X66" customClass="CustomNavigationBar" customModule="visionauts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="tJy-o6-rYR"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Help"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPg-C1-QQV">
+                                <rect key="frame" x="26" y="88" width="323" height="579"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1019607843" green="0.14901960780000001" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EFr-Ld-Spi" firstAttribute="trailing" secondItem="BDn-Ta-X66" secondAttribute="trailing" id="11p-wf-uta"/>
+                            <constraint firstItem="EFr-Ld-Spi" firstAttribute="bottom" secondItem="PPg-C1-QQV" secondAttribute="bottom" id="9MW-Cu-zeO"/>
+                            <constraint firstItem="PPg-C1-QQV" firstAttribute="top" secondItem="BDn-Ta-X66" secondAttribute="bottom" id="HNh-tv-lag"/>
+                            <constraint firstItem="EFr-Ld-Spi" firstAttribute="trailing" secondItem="PPg-C1-QQV" secondAttribute="trailing" constant="26" id="aou-Ky-g3W"/>
+                            <constraint firstItem="PPg-C1-QQV" firstAttribute="leading" secondItem="h65-O5-rXv" secondAttribute="leading" constant="26" id="azJ-qE-dwJ"/>
+                            <constraint firstItem="BDn-Ta-X66" firstAttribute="leading" secondItem="EFr-Ld-Spi" secondAttribute="leading" id="i2o-sn-V2Y"/>
+                            <constraint firstItem="BDn-Ta-X66" firstAttribute="top" secondItem="h65-O5-rXv" secondAttribute="top" id="jCk-Bc-YS7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EFr-Ld-Spi"/>
+                    </view>
+                    <connections>
+                        <outlet property="customNavigationBar" destination="BDn-Ta-X66" id="UJH-rO-MXd"/>
+                        <outlet property="textView" destination="PPg-C1-QQV" id="jGn-Oj-mZC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y7k-RI-Rn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1884" y="-448"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>

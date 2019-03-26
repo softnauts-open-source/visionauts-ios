@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GVk-my-0yI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Proxima Nova Bold.otf">
+            <string>ProximaNova-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Permission View Controller-->
+        <scene sceneID="vLA-dM-gMl">
+            <objects>
+                <viewController storyboardIdentifier="PermissionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eQ8-hC-jvs" customClass="PermissionViewController" customModule="visionauts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4HJ-4f-tTF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenGradient" translatesAutoresizingMaskIntoConstraints="NO" id="jFe-98-AJC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="562"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn on Bluetooth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBX-H7-TMo">
+                                <rect key="frame" x="65.5" y="60" width="244.5" height="37"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3B-en-e2m" customClass="CustomButtonWithPulse" customModule="visionauts" customModuleProvider="target">
+                                <rect key="frame" x="105.5" y="249.5" width="164" height="168"/>
+                                <accessibility key="accessibilityConfiguration" label="Turn on Bluetooth"/>
+                                <state key="normal" image="bluetooth_ico"/>
+                                <connections>
+                                    <action selector="mainButtonTap:" destination="eQ8-hC-jvs" eventType="touchDown" id="GrQ-9p-ajL"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QoJ-1X-3Q3" customClass="SubMenuView" customModule="visionauts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="gAT-OS-0h0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1019607843" green="0.14901960780000001" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="K3B-en-e2m" firstAttribute="centerY" secondItem="4HJ-4f-tTF" secondAttribute="centerY" id="2Bo-Fh-KqM"/>
+                            <constraint firstItem="jFe-98-AJC" firstAttribute="top" secondItem="4HJ-4f-tTF" secondAttribute="top" id="BZd-jW-Neb"/>
+                            <constraint firstItem="ub8-vm-QEZ" firstAttribute="bottom" secondItem="jFe-98-AJC" secondAttribute="bottom" constant="105" id="D6l-1U-Xgl"/>
+                            <constraint firstItem="ub8-vm-QEZ" firstAttribute="trailing" secondItem="QoJ-1X-3Q3" secondAttribute="trailing" id="DHU-cm-xWb"/>
+                            <constraint firstItem="jFe-98-AJC" firstAttribute="leading" secondItem="ub8-vm-QEZ" secondAttribute="leading" id="K5N-CC-KAk"/>
+                            <constraint firstAttribute="trailing" secondItem="jFe-98-AJC" secondAttribute="trailing" id="Pgc-iR-udf"/>
+                            <constraint firstItem="QoJ-1X-3Q3" firstAttribute="leading" secondItem="ub8-vm-QEZ" secondAttribute="leading" id="edg-Jc-e2W"/>
+                            <constraint firstItem="ub8-vm-QEZ" firstAttribute="bottom" secondItem="QoJ-1X-3Q3" secondAttribute="bottom" id="gXf-rw-xJ1"/>
+                            <constraint firstItem="iBX-H7-TMo" firstAttribute="centerX" secondItem="4HJ-4f-tTF" secondAttribute="centerX" id="k2d-L7-LH7"/>
+                            <constraint firstItem="K3B-en-e2m" firstAttribute="centerX" secondItem="4HJ-4f-tTF" secondAttribute="centerX" id="o6G-B8-yVQ"/>
+                            <constraint firstItem="iBX-H7-TMo" firstAttribute="top" secondItem="4HJ-4f-tTF" secondAttribute="top" constant="60" id="ruS-ZQ-ie1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ub8-vm-QEZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c8u-C1-8nB"/>
+                    <connections>
+                        <outlet property="mainButton" destination="K3B-en-e2m" id="0ND-IM-ohy"/>
+                        <outlet property="subMenu" destination="QoJ-1X-3Q3" id="O4Q-tR-p9J"/>
+                        <outlet property="topLabel" destination="iBX-H7-TMo" id="qO9-om-I4e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iDl-ig-Ikh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1964" y="320.68965517241384"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P9v-2O-Ln3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="GVk-my-0yI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qm8-XB-cKX">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eQ8-hC-jvs" kind="relationship" relationship="rootViewController" id="MHF-Ah-gAH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ret-CG-6wS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024.8" y="320.68965517241384"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bluetooth_ico" width="164" height="168"/>
+        <image name="launchScreenGradient" width="375" height="465"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>

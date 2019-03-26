@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubMenuView" customModule="visionauts" customModuleProvider="target">
+            <connections>
+                <outlet property="helpButton" destination="ebV-fp-wRI" id="do4-KW-VBy"/>
+                <outlet property="settingsButton" destination="PDf-fh-6wq" id="rkv-Rf-GBG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cX5-mw-gsf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebV-fp-wRI">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                            <inset key="contentEdgeInsets" minX="20" minY="10" maxX="10" maxY="20"/>
+                            <state key="normal" image="help_ico"/>
+                            <connections>
+                                <action selector="helpButtonTap:" destination="-1" eventType="touchUpInside" id="djt-99-v9G"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDf-fh-6wq">
+                            <rect key="frame" x="295" y="0.0" width="80" height="80"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="20" maxY="20"/>
+                            <state key="normal" image="settings_ico"/>
+                            <connections>
+                                <action selector="settingsButtonTap:" destination="-1" eventType="touchUpInside" id="ZeH-6U-hx6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="cX5-mw-gsf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="KzO-DW-j7I"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cX5-mw-gsf" secondAttribute="bottom" id="PLG-k4-yam"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cX5-mw-gsf" secondAttribute="trailing" id="csT-FM-DQe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="leading" secondItem="cX5-mw-gsf" secondAttribute="leading" id="iOf-Ea-dTC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="145" y="77"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="help_ico" width="50" height="50"/>
+        <image name="settings_ico" width="50" height="50"/>
+    </resources>
+</document>

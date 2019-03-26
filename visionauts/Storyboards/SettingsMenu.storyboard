@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gi1-vQ-Jmc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="lFo-ye-Cdd">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="Gi1-vQ-Jmc" customClass="SettingsViewController" customModule="visionauts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5BJ-Kw-F91">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyM-fm-tGS" customClass="CustomNavigationBar" customModule="visionauts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="Sgl-O1-71S"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Settings"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9As-Bx-91t" customClass="SettingsView" customModule="visionauts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="375" height="579"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1019607843" green="0.14901960780000001" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9As-Bx-91t" firstAttribute="top" secondItem="wyM-fm-tGS" secondAttribute="bottom" id="5oJ-eQ-bnn"/>
+                            <constraint firstItem="wyM-fm-tGS" firstAttribute="leading" secondItem="s8h-1V-x4h" secondAttribute="leading" id="E09-x6-jt9"/>
+                            <constraint firstItem="wyM-fm-tGS" firstAttribute="trailing" secondItem="s8h-1V-x4h" secondAttribute="trailing" id="HKH-Zl-RUu"/>
+                            <constraint firstItem="s8h-1V-x4h" firstAttribute="trailing" secondItem="9As-Bx-91t" secondAttribute="trailing" id="deG-Yq-WbF"/>
+                            <constraint firstItem="s8h-1V-x4h" firstAttribute="bottom" secondItem="9As-Bx-91t" secondAttribute="bottom" id="kdX-jw-thL"/>
+                            <constraint firstItem="9As-Bx-91t" firstAttribute="leading" secondItem="s8h-1V-x4h" secondAttribute="leading" id="leZ-gf-nA0"/>
+                            <constraint firstItem="wyM-fm-tGS" firstAttribute="top" secondItem="5BJ-Kw-F91" secondAttribute="top" id="xks-JQ-fLh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s8h-1V-x4h"/>
+                    </view>
+                    <connections>
+                        <outlet property="customNavigationBar" destination="wyM-fm-tGS" id="jkP-Ps-ey9"/>
+                        <outlet property="settingsView" destination="9As-Bx-91t" id="NhM-pL-2Yd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tHj-ff-2cA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1884" y="320.68965517241384"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>
