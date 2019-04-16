@@ -12,7 +12,7 @@ class BeaconsViewModel {
     
     //MARK: - Parse
     
-    func parseGetBeacons(_ data: Data) {
+    func saveBeacons(_ data: Data) {
         guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext else {
             fatalError("Failed to retrieve context")
         }

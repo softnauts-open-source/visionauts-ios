@@ -35,6 +35,24 @@ enum BeaconsMock: Mockable {
                         ],
                         "created_at": "2019-02-21T10:22:02+00:00",
                         "updated_at": "2019-02-21T10:22:02+00:00"
+                    ],
+                    [
+                        "id": 3,
+                        "uuid": "Zxsq",
+                        "minor": "37252",
+                        "major": "857",
+                        "enabled": true,
+                        "texts": [
+                            [
+                                "id": 3,
+                                "language": "en",
+                                "description": "Hall",
+                                "created_at": "2019-02-21T10:22:02+00:00",
+                                "updated_at": "2019-02-21T10:22:02+00:00"
+                            ]
+                        ],
+                        "created_at": "2019-02-21T10:22:02+00:00",
+                        "updated_at": "2019-02-21T10:22:02+00:00"
                     ]
                 ]
             ]
