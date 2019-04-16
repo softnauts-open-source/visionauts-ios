@@ -13,6 +13,7 @@ import CoreData
 class DatabaseServiceTests: XCTestCase {
 
     var sut = ServiceFactory.databaseService
+    var database = DatabaseMocked()
     
     // Notification for saving context
     var saveNotificationCompleteHandler: ((Notification) -> Void)?
@@ -29,45 +30,9 @@ class DatabaseServiceTests: XCTestCase {
 
     override func tearDown() {
         NotificationCenter.default.removeObserver(self)
-        flushData()
+        database.flushData()
         super.tearDown()
     }
-
-    //MARK: - Mock in-memory core data stack
-    
-    lazy var managedObjectModel: NSManagedObjectModel = {
-        let managedObject = NSManagedObjectModel.mergedModel(from: [Bundle(for: type(of: self))] )!
-        return managedObject
-    }()
-    
-    lazy var mockPersistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "PersistentItems", managedObjectModel: self.managedObjectModel)
-        let description = NSPersistentStoreDescription()
-        description.type = NSInMemoryStoreType
-        description.shouldAddStoreAsynchronously = false
-        
-        container.persistentStoreDescriptions = [description]
-        container.loadPersistentStores(completionHandler: { (description, error) in
-            precondition(description.type == NSInMemoryStoreType)
-            
-            if let error = error {
-                fatalError("Create an in-memory coordinator failed \(error)")
-            }
-        })
-        return container
-    }()
-    
-    //MARK: - Mock fetched results controller
-    
-    lazy var fetchedResultsController: NSFetchedResultsController = { () -> NSFetchedResultsController<BeaconModel> in
-        let fetchRequest: NSFetchRequest<BeaconModel> = BeaconModel.fetchRequest()
-        
-        fetchRequest.sortDescriptors = []
-        
-        let moc = mockPersistentContainer.viewContext
-        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
-        return fetchedResultsController
-    }()
     
     //MARK: - Notification - saving context
     
@@ -108,10 +73,10 @@ class DatabaseServiceTests: XCTestCase {
                 
                 let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext!
                 let decoder = JSONDecoder()
-                decoder.userInfo[codingUserInfoKeyManagedObjectContext] = self.mockPersistentContainer.viewContext
+                decoder.userInfo[codingUserInfoKeyManagedObjectContext] = self.database.mockPersistentContainer.viewContext
                 
                 _ = try!decoder.decode([BeaconModel].self, from: data)
-                try! self.mockPersistentContainer.viewContext.save()
+                try! self.database.mockPersistentContainer.viewContext.save()
                 
             case .failure(let message):
                 XCTAssert(false, "reason: \(message)")
@@ -119,29 +84,5 @@ class DatabaseServiceTests: XCTestCase {
         }
         
         waitForExpectations(timeout: 4.0, handler: nil)
-    }
-}
-
-//MARK: - Helpers
-
-extension DatabaseServiceTests {
-    
-    func flushData() {
-        let fetchRequest = BeaconModel.fetchRequest() as NSFetchRequest<BeaconModel>
-        let objs = try! mockPersistentContainer.viewContext.fetch(fetchRequest)
-        for case let obj as NSManagedObject in objs {
-            mockPersistentContainer.viewContext.delete(obj)
-        }
-        
-        try! mockPersistentContainer.viewContext.save()
-    }
-}
-
-public extension NSManagedObject {
-    
-    convenience init(context: NSManagedObjectContext) {
-        let name = String(describing: type(of: self))
-        let entity = NSEntityDescription.entity(forEntityName: name, in: context)!
-        self.init(entity: entity, insertInto: context)
     }
 }

@@ -22,7 +22,7 @@ class DetectingBeaconsViewModel {
     var currentItemIndex: Int = 0
     
     // Data
-    private var items: [BeaconModel] = [] {
+    internal var items: [BeaconModel] = [] {
         didSet {
             let testTexts = items.map {
                 return $0.descriptionInCurrentLanguage ?? "empty description"

@@ -56,7 +56,7 @@ class LaunchingViewController: UIViewController {
             guard let strongSelf = self else { return }
             switch response {
             case .success(let data):
-                strongSelf.beaconsViewModel.parseGetBeacons(data)
+                strongSelf.beaconsViewModel.saveBeacons(data)
                 strongSelf.setupProgressView()
             case .failure(let message):
                 print(message)
